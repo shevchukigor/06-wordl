@@ -27628,28 +27628,20 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-function GuessList() {
+function GuessList({ guesses }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "guess-results",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: guesses.map((guess)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "guess",
-                children: "FIRST"
-            }, void 0, false, {
+                children: guess
+            }, crypto.randomUUID(), false, {
                 fileName: "src/components/GuessList/GuessList.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "guess",
-                children: "GUESS"
-            }, void 0, false, {
-                fileName: "src/components/GuessList/GuessList.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                lineNumber: 8,
+                columnNumber: 11
+            }, this);
+        })
+    }, void 0, false, {
         fileName: "src/components/GuessList/GuessList.js",
         lineNumber: 5,
         columnNumber: 5
